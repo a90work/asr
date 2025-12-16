@@ -12,7 +12,7 @@ app.post("/admin.html", (req, res) => {
   const password = req.body.password;
 
   if (email === "asr@gmail.com" && password === "1390") {
-    res.redirect("/admmin.html")
+    res.redirect("/admin.html")
   } else {
     res.send("Wrong email or password");
   }
@@ -24,4 +24,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log("Server running on port " + PORT);
 });
+
 
