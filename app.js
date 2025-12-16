@@ -7,12 +7,12 @@ app.use(express.urlencoded({ extended: true }));
 // فایل‌های HTML و CSS
 app.use(express.static("public"));
 
-app.post("/admin", (req, res) => {
+app.post("/admin.html", (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
 
   if (email === "asr@gmail.com" && password === "1390") {
-    res.send("Welcome alireza");
+    res.redirect("/admmin.html")
   } else {
     res.send("Wrong email or password");
   }
@@ -24,3 +24,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log("Server running on port " + PORT);
 });
+
